@@ -1,6 +1,6 @@
 # Calorie Tracker
 
-![](https://github.com/andrewtrabucco/Project-2/blob/Caleb-Branch/public/assets/Screen%20Shot%202020-11-17%20at%2010.32.54%20AM.png)
+![](https://github.com/Cachamoe/Calorie-Tracker/blob/main/public/assets/Screen%20Shot%202020-11-18%20at%205.22.01%20PM.png)
 
 ## Overview:
 This application allows the user to track their calorie imputs and outputs for a given day!
