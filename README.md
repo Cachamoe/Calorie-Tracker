@@ -16,5 +16,8 @@ Here is a link to the deployed webpage: [https://whispering-river-77918.herokuap
 ## Programs:
 Javascript, jQuery, Handlebars, CSS, Bulma, MySQL, Sequelize, Node.js, Express.js, Moment.js, Font Awesome, Google Fonts, JSON
 
+## License 
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
 ## Authors:
 Andrew (andrewtrabucco), Gina (gdannibale), Caleb (Cachamoe)
