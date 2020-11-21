@@ -3,7 +3,7 @@
 ![](https://github.com/Cachamoe/Calorie-Tracker/blob/main/public/assets/Screen%20Shot%202020-11-18%20at%205.22.01%20PM.png)
 
 ## Overview
-This application allows the user to track their calorie imputs and outputs for a given day!
+This application allows users to track their calorie imputs and outputs for a given day!
 
 Here is a link to the deployed webpage: [https://whispering-river-77918.herokuapp.com]
 
