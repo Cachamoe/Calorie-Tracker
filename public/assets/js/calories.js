@@ -20,16 +20,15 @@ $(document).ready(function () {
     todaysDate();
 });
 
-// Search Button Functionality (Imputs text and calls searchFood function)
+
 $("#searchButton").on("click", function (event) {
     event.preventDefault();
     $(".food-list").empty();
     let food = $("#foodTextEntry").val().trim();
 
-    // console.log(food);
+    
     let queryURL = "https://api.spoonacular.com/food/ingredients/search?query=" + food + "&sort=calories&sortDirection=desc&apiKey=c1efb5fd0f5141858fc5b5f6a6b5ab85";
 
-    // Rapid API Call
     $.ajax({
         url: queryURL,
         method: "GET",

@@ -1,12 +1,10 @@
-// Require models
 const db = require("../models");
 const moment = require('moment');
 const { Op } = require("sequelize");
 
-// Routes
+
 module.exports = function (app) {
 
-    // GET route to get all foods
     app.get("/api/foods/current", function (req, res) {
         let today = moment().format('YYYY-MM-DD');
         let tomorrow = moment().add(1, 'days').format('YYYY-MM-DD');
@@ -23,7 +21,6 @@ module.exports = function (app) {
         });
     });
 
-    // POST route for creating new food
     app.post("/api/foods", function (req, res) {
         db.Food.create({
             name: req.body.name,
@@ -36,7 +33,6 @@ module.exports = function (app) {
         });
     });
 
-    // GET route to get all exercises
     app.post("/api/exercise/current", function (req, res) {
         let today = moment().format('YYYY-MM-DD');
         let tomorrow = moment().add(1, 'days').format('YYYY-MM-DD');
@@ -53,7 +49,6 @@ module.exports = function (app) {
         });
     });
 
-    // POST route for creating new exercise
     app.post("/api/exercise", function (req, res) {
         db.Exercise.create({
             name: req.body.name,
