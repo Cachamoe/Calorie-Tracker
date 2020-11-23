@@ -1,6 +1,5 @@
 // Require models
-let db = require("../models");
-
+const db = require("../models");
 const moment = require('moment');
 const { Op } = require("sequelize");
 

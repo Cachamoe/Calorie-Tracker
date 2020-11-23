@@ -34,7 +34,6 @@ $("#searchButton").on("click", function (event) {
         url: queryURL,
         method: "GET",
     }).then(function (response) {
-        console.log(response);
 
         for (var i = 0; i < response.results.length; i++) {
             let li = $("<li>");
@@ -54,24 +53,16 @@ $("#searchButton").on("click", function (event) {
                 url: queryURLtwo,
                 method: "GET",
             }).then(function (id) {
-                console.log(id);
-                console.log(id.nutrition.nutrients[0])
 
                 let foodChosen = {}
                 foodChosen.name = (id.name);
                 foodChosen.calories = (id.nutrition.nutrients[0].amount);
-                console.log(id.name);
-                console.log(id.nutrition.nutrients[0].amount);
-
 
                 totalCalories.push(parseInt(foodChosen.calories));
                 $("#progressIn").attr("value", totalCalories.reduce((a, b) => a + b, 0));
                 caloriesIn.text(totalCalories.reduce((a, b) => a + b, 0));
 
-
-                $.post("api/foods", foodChosen).then(function (response) {
-                    console.log(response);
-                });
+                $.post("api/foods", foodChosen)
             });
         });
     });
@@ -84,18 +75,14 @@ $("#customButton").on("click", function (event) {
     foodItem.name = $("#customFoodTextEntry").val();
     foodItem.calories = parseInt($("#enterCustomCalories").val());
 
-
     totalCalories.push(foodItem.calories);
     $("#progressIn").attr("value", totalCalories.reduce((a, b) => a + b, 0));
     caloriesIn.text(totalCalories.reduce((a, b) => a + b, 0));
-
 
     $.post("api/foods", foodItem).then(function (response) {
         $.ajax({
             url: "/api/foods",
             method: "POST"
-        }).then(function (response) {
-            console.log(response);
         });
     });
     $("#customFoodTextEntry").val("");
@@ -107,15 +94,12 @@ $("#caloriesBurnedButton").on("click", function (event) {
     let burnedCalories = {}
     burnedCalories.calories = parseInt($("#enterBurnedCalories").val());
 
-
     totalBurnedCalories.push(burnedCalories.calories);
     $("#progressOut").attr("value", totalBurnedCalories.reduce((a, b) => a + b, 0));
     caloriesOut.text(totalBurnedCalories.reduce((a, b) => a + b, 0));
 
-
-    $.post("api/exercise", burnedCalories).then(function (response) {
-        console.log(response);
+    $.post("api/exercise", burnedCalories).then(function () {
+        $("#enterBurnedCalories").val("");
     });
-    $("#enterBurnedCalories").val("");
 });
 
