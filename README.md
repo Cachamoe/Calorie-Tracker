@@ -13,7 +13,7 @@ Here is a link to the deployed webpage: [https://whispering-river-77918.herokuap
 3) Enter your estimated exercise calorie output for the day
 
 
-## Programs
+## Technologies
 Javascript, jQuery, Handlebars, CSS, Bulma, MySQL, Sequelize, Node.js, Express.js, Moment.js, Font Awesome, Google Fonts, JSON
 
 ## License 
